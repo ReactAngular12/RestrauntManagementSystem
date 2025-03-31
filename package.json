@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.14",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
@@ -44,6 +45,7 @@
     "lint-staged": "^15.5.0",
     "prettier": "3.5.3",
     "sass": "^1.86.0",
+    "sass-embedded": "^1.86.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
