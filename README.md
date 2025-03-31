@@ -15,10 +15,10 @@ A modern web application for managing restaurant operations, built with React, T
 
 ## Tech Stack
 
-- React 18
+- React 19
 - TypeScript
 - Vite
-- Tailwind CSS
+- Mantine
 - React Router
 - Axios
 - React Query
