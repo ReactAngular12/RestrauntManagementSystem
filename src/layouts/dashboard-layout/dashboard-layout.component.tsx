@@ -2,9 +2,9 @@ import { Outlet } from "react-router";
 
 export const DashboardLayoutComponent = () => {
   return (
-    <div>
+    <section>
       <Outlet />
-    </div>
+    </section>
   );
 };
 

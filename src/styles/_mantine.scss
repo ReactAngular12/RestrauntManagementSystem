@@ -1,1 +1,52 @@
 @use "sass:math";
+
+/**
+* Mantine generated variables used in the project.
+* Colors
+* Mantine colors can be used in the following way:
+* --mantine-color-[palette-name]-[index]
+*
+* Example:
+* --mantine-color-pumpkin-5
+*
+* This will be translated to:
+* background-color: var(--mantine-color-pumpkin-5);
+*
+* Typography
+* Mantine typography can be used in the following way:
+* font-family: var(--mantine-font-family);
+*
+* Spacing
+* Mantine spacing can be used in the following way:
+* --mantine-spcacing-[size]
+* 
+* Example:
+* --mantine-spacing-xs
+*
+* This will be translated to:
+* margin-top: var(--mantine-spacing-xs);
+*
+* Font sizes
+* Mantine font sizes can be used in the following way:
+* --mantine-font-size-[size]
+*
+* Example:
+* --mantine-font-size-xs
+*
+* This will be translated to:
+* font-size: var(--mantine-font-size-xs);
+*
+* To check all the available sizes, you can go to the theme.ts file and look for the fontSizes, colors and spacing variables.
+*/
+
+@mixin light {
+  [data-mantine-color-scheme="light"] & {
+    @content;
+  }
+}
+
+@mixin dark {
+  [data-mantine-color-scheme="dark"] & {
+    @content;
+  }
+}
