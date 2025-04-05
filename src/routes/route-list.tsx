@@ -23,6 +23,26 @@ const PageNotFoundComponent = lazy(() =>
 const SignUpComponent = lazy(() =>
   import("../pages").then((module) => ({ default: module.SignUpComponent })),
 );
+const OTPVerificationComponent = lazy(() =>
+  import("../pages").then((module) => ({
+    default: module.OTPVerificationComponent,
+  })),
+);
+const ResetPasswordComponent = lazy(() =>
+  import("../pages").then((module) => ({
+    default: module.ResetPasswordComponent,
+  })),
+);
+const EmailVerificationComponent = lazy(() =>
+  import("../pages").then((module) => ({
+    default: module.EmailVerificationComponent,
+  })),
+);
+const ResetPasswordSuccessComponent = lazy(() =>
+  import("../pages").then((module) => ({
+    default: module.ResetPasswordSuccessComponent,
+  })),
+);
 
 // Lazy load all features
 const AgeVerificationComponent = lazy(() =>
@@ -122,7 +142,7 @@ const DashboardLayoutComponent = lazy(() =>
 export const routeList = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/dashboard" replace />,
+    element: <Navigate to="/login" replace />,
   },
   {
     path: "/dashboard",
@@ -302,6 +322,14 @@ export const routeList = createBrowserRouter([
           </LazyLoadWrapper>
         ),
       },
+      // {
+      //   path: "reset-password",
+      //   element: (
+      //     <LazyLoadWrapper>
+      //       <ResetPasswordComponent />
+      //     </LazyLoadWrapper>
+      //   ),
+      // },
     ],
   },
   {
@@ -309,6 +337,54 @@ export const routeList = createBrowserRouter([
     element: (
       <LazyLoadWrapper>
         <SignUpComponent />
+      </LazyLoadWrapper>
+    ),
+  },
+  {
+    path: "/email-verification",
+    element: (
+      <LazyLoadWrapper>
+        <EmailVerificationComponent />
+      </LazyLoadWrapper>
+    ),
+  },
+  {
+    path: "/otp-verification",
+    element: (
+      <LazyLoadWrapper>
+        <OTPVerificationComponent />
+      </LazyLoadWrapper>
+    ),
+  },
+  {
+    path: "/forgot-password",
+    element: (
+      <LazyLoadWrapper>
+        <ForgotPasswordComponent />
+      </LazyLoadWrapper>
+    ),
+  },
+  {
+    path: "/reset-password",
+    element: (
+      <LazyLoadWrapper>
+        <ResetPasswordComponent />
+      </LazyLoadWrapper>
+    ),
+  },
+  {
+    path: "/reset-password",
+    element: (
+      <LazyLoadWrapper>
+        <ResetPasswordComponent />
+      </LazyLoadWrapper>
+    ),
+  },
+  {
+    path: "/reset-password-success",
+    element: (
+      <LazyLoadWrapper>
+        <ResetPasswordSuccessComponent />
       </LazyLoadWrapper>
     ),
   },
