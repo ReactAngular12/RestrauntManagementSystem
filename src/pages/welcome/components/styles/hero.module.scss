@@ -1,0 +1,29 @@
+@use "/src/styles/mantine" as *;
+
+.hero {
+  width: 100%;
+  height: 23em;
+  overflow: hidden;
+  border-radius: var(--mantine-spacing-md);
+  position: relative;
+
+  &Overlay {
+    z-index: 1;
+  }
+
+  &Container {
+    min-height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &Title {
+    text-align: center;
+    font-weight: 400;
+    color: var(--mantine-color-blackWhite-9);
+
+    &Bold {
+      font-weight: 700;
+    }
+  }
+}

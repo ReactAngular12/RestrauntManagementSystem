@@ -1,0 +1,22 @@
+@use "/src/styles/mantine" as *;
+
+.welcome {
+  min-height: 100vh;
+
+  &Container {
+    min-width: 75em;
+    border-radius: var(--mantine-spacing-md);
+    padding-block: var(--mantine-spacing-4xl);
+    padding-inline: var(--mantine-spacing-3xl);
+
+    @include light {
+      background-color: var(--mantine-color-surface-0);
+      border: 1px solid var(--mantine-color-surface-9);
+    }
+
+    @include dark {
+      background-color: var(--mantine-color-dark-7);
+      border: 1px solid var(--mantine-color-dark-4);
+    }
+  }
+}

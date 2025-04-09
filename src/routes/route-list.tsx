@@ -4,6 +4,9 @@ import { createBrowserRouter, Navigate } from "react-router";
 import { LazyLoadWrapper } from "./lazy-load-wrapper.component";
 
 // Lazy load all Pages
+const WelcomeComponent = lazy(() =>
+  import("../pages").then((module) => ({ default: module.WelcomeComponent })),
+);
 const DashboardComponent = lazy(() =>
   import("../pages").then((module) => ({ default: module.DashboardComponent })),
 );
@@ -285,6 +288,14 @@ export const routeList = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "/welcome",
+    element: (
+      <LazyLoadWrapper>
+        <WelcomeComponent />
+      </LazyLoadWrapper>
+    ),
   },
   {
     path: "/login",

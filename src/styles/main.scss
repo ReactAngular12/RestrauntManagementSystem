@@ -1,1 +1,15 @@
 @use "./base" as *;
+@use "./mantine" as *;
+
+html,
+body {
+  @include light {
+    background-color: var(--mantine-color-background-0);
+    color: var(--mantine-color-text-0);
+  }
+
+  @include dark {
+    background-color: var(--mantine-color-blackWhite-0);
+    color: var(--mantine-color-blackWhite-9);
+  }
+}

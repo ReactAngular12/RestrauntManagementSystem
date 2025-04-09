@@ -1,0 +1,28 @@
+@use "/src/styles/mantine" as *;
+
+.welcomeForm {
+  width: 100%;
+  margin-top: var(--mantine-spacing-4xl);
+
+  &Container {
+    width: 40%;
+  }
+
+  &Input {
+    &Label {
+      font-size: var(--mantine-font-size-md);
+      font-weight: 700;
+      margin-bottom: var(--mantine-spacing-xs);
+    }
+
+    &Description {
+      font-size: var(--mantine-font-size-xs);
+      font-weight: 400;
+      margin-top: var(--mantine-spacing-xs);
+    }
+
+    &Error {
+      margin-top: var(--mantine-spacing-xs);
+    }
+  }
+}
